@@ -1,0 +1,21 @@
+<div class="container my-5">
+  <div class="col-md-12 col-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4>Task Manager</h4>
+      </div>
+      <div class="card-body">
+        <div>
+          @for(task of tasksList; track task.id){
+          <div>
+            <app-task-item [taskDetails]="task"></app-task-item>
+          </div>
+          }
+          @empty {
+            <h1 class="text-center"> No tasks available </h1>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
